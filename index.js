@@ -84,17 +84,17 @@ async function msgHandler (client, message) {
             switch (cmd[0]) {
                 case '#menu':
                 case '#help':
-                    client.sendText(from, '😂❕ *WHATSAPP ROBOT* ❕😂\n' +
+                    client.sendText(from, '*-=[ 🤖 MENU AZ BOT V.1 🤖]=-n' +
                     '\nFeatures:\n\n' +
                     '1. *#menu | #help* => Tampilkan semua fitur\n\n' +
                     '2. *#conora* => Tampilkan data corona terbaru di Indonesia\n\n' +
                     '3. *#bijak* => Tampilkan kata bijak\n\n' +
                     '4. *#liriklagu lathi* => Tampilkan lirik lagu *Lathi*\n\n'+
-                    '5. *#artinama Daphinokio* => Tampilkan arti nama dari *Daphinokio*\n\n' +
+                    '5. *#artinama Alfiyan* => Tampilkan arti nama dari *Alfiyan*\n\n' +
                     '6. *#weton 06 08 1995* => Tampilkan weton dan watak (tgl bulan tahun)\n\n' +
-                    '7. *#alay Daphinokio* => Tampilkan kalimat alay dari *Daphinokio*\n\n' +
-                    '8. *#quotemaker seseorang-bebas-memilih-jalan-ninjanya Daphino rain* => Tampilkan gambar quotes (pisahkan dengan -) dengan nama *Daphino* dan gambar tema *Hujan*\n\n' +
-                    '9. *#namaninjaku Daphinokio* => Tampilkan nama ninja terkeren dari *Daphinokio*\n\n' +
+                    '7. *#alay Alfiyan* => Tampilkan kalimat alay dari *Alfiyan*\n\n' +
+                    '8. *#quotemaker seseorang-bebas-memilih-jalan-ninjanya Alfiyan rain* => Tampilkan gambar quotes (pisahkan dengan -) dengan nama *Alfiyan* dan gambar tema *Hujan*\n\n' +
+                    '9. *#namaninjaku Alfiyan* => Tampilkan nama ninja terkeren dari *Alfiyan*\n\n' +
                     '10. *#stiker url-gambar* => Tampilkan stiker dengan url yang kamu masukkan\n\n' +
                     '11. *#stiker* => Tampilkan stiker dengan gambar yang kamu kirimkan dengan caption #stiker\n\n' +
                     '12. *#tiktok url-video* => Download video tiktok dengan url yang kamu berikan\n\n**BOT akan terus di update')
@@ -128,7 +128,7 @@ async function msgHandler (client, message) {
                             const videoMeta = await tiktok(url)
                             const filename = videoMeta.authorMeta.name + '.mp4'
                             await client.sendFile(from, videoMeta.videobase64, filename, videoMeta.NoWaterMark ? '' : 'Maaf, video tanpa watermark tidak tersedia')
-                                .then(await client.sendText(from, `Metadata:\nUsername: ${videoMeta.authorMeta.name} \nMusic: ${videoMeta.musicMeta.musicName} \nView: ${videoMeta.playCount.toLocaleString()} \nLike: ${videoMeta.diggCount.toLocaleString()} \nComment: ${videoMeta.commentCount.toLocaleString()} \nShare: ${videoMeta.shareCount.toLocaleString()} \nCaption: ${videoMeta.text.trim() ? videoMeta.text : '-'} \n\nDonasi: bantu aku beli dimsum dengan menyawer melalui https://saweria.co/donate/yogasakti atau mentrakteer melalui https://trakteer.id/red-emperor \nTerimakasih.`))
+                                .then(await client.sendText(from, `Metadata:\nUsername: ${videoMeta.authorMeta.name} \nMusic: ${videoMeta.musicMeta.musicName} \nView: ${videoMeta.playCount.toLocaleString()} \nLike: ${videoMeta.diggCount.toLocaleString()} \nComment: ${videoMeta.commentCount.toLocaleString()} \nShare: ${videoMeta.shareCount.toLocaleString()} \nCaption: ${videoMeta.text.trim() ? videoMeta.text : '-'} \n\nDonasi: bantu aku beli dimsum dengan menyawer melalui https://saweria.co/donate/daenghunter atau mentrakteer melalui https://trakteer.id/red-emperor \nTerimakasih.`))
                                 .catch(err => console.log('Caught exception: ', err))
                         } else {
                             client.sendText(from, 'Maaf, Url yang kamu kirim tidak valid')
